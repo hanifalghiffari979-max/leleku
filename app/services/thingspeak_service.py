@@ -27,10 +27,10 @@ async def fetch_latest_from_thingspeak(
                     return None
 
             return {
-                "ph": safe_float(latest.get("field1")),
-                "tds": safe_float(latest.get("field2")),
-                "temperature": safe_float(latest.get("field3")),
-                "ammonia": safe_float(latest.get("field4")),
+                "ammonia": safe_float(latest.get("field1")),
+                "temperature": safe_float(latest.get("field2")),
+                "tds": safe_float(latest.get("field3")),
+                "ph": safe_float(latest.get("field4")),
                 "created_at": latest.get("created_at")
             }
         except Exception as e:
